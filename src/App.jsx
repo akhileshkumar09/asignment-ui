@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import Menu from './components/Menu'
 import Navbar from './components/Navbar'
+import Dashboard from './Dashboard';
 
 function App() {
  const [showNavbar, setShowNavbar] = useState(window.innerWidth > 750)
@@ -31,7 +32,7 @@ function App() {
        }
      
       </div>
-    
+    <Dashboard/>
       
    
     </>
