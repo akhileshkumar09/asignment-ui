@@ -1,4 +1,6 @@
-
+import png from '../src/assets/png.png'
+import { RiCalendarCheckLine } from "react-icons/ri";
+import profile from '../src/assets/download.jpg'
 
 const Dashboard = () => {
   return (
@@ -7,13 +9,46 @@ const Dashboard = () => {
       {/* Main Content Grid */}
       <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-4">
         {/* Left Section */}
-        <div className="md:col-span-1 bg-white p-4 rounded-lg shadow-md">
-          <h2 className="text-lg font-bold mb-4">Your Result!</h2>
-          <p className="text-sm mb-4">All your insights & details in one place</p>
-          <div className="bg-gray-50 p-4 rounded-md mb-4">
-            <p className="font-bold text-xl">136 / 240</p>
-            <p className="text-green-600 text-sm font-bold">76% Accuracy</p>
-            <button className="mt-4 w-full bg-purple-500 text-white py-2 rounded-md">Practice more</button>
+        <div className="md:col-span-1 bg-[#f7f6fc] p-4 rounded-lg shadow-md ">
+        <div className='flex flex-col items-center '>
+        <img src={png} alt="png" className='w-28 h-28'/>
+          <h2 className="text-lg font-bold  text-[#7175c5]">Your Result!</h2>
+          <p className="text-xs text-gray-500 mb-4">All your insights & details in one place</p>
+          </div>
+          <div className="bg-white p-2 rounded-md mb-4 border flex flex-col gap-4">
+
+          <div className='flex p-1 bg-[#f7f6fc] gap-2 rounded'>
+            <div className='bg-[#dbd8f7] p-1 rounded flex items-center'>
+            <RiCalendarCheckLine  className='text-3xl text-gray-600'/>
+            </div>
+                <span className='flex flex-col'>
+                <span className='text-xs bg-[#5a5fbc] rounded-lg w-20  h-4 text-center text-white tracking-tighter'>YOU'VE PASSED</span>
+                <p className="text-xs"><span className='text-xl font-bold'>136</span> / 240</p>
+                </span>
+                <span className='flex gap-1'><hr className='w-.1 h-10 border-r-2 border-gray-600 ml-2'/>
+                    <p className="text-[#059794] text-sm tracking-tighter"><span className='bg-[#059794] text-white rounded px-1'>76% </span>Accuracy</p>
+                </span>
+            </div>
+            <div className='flex p-1 bg-[#f7f6fc] gap-2 rounded flex-col'>
+                <div className='flex gap-2'>
+                    <img src={profile} alt='profile photo' className='border-2 rounded-lg w-10 h-10'/>
+                    <span className='flex flex-col'>
+                    <span className='text-xs  text-[#5a5fbc] tracking-tighter font-semibold'>Top Score</span>
+                    <p className="text-xs"><span className='text-xl font-bold'>230</span> / 240</p>
+                    </span>
+                </div>
+                <hr className='w-full  border-b-2 border-gray-600 rounded-full'/>
+                <div className='flex gap-1 items-center'>
+                <span className='text-bold tracking-tighter'><span className='text-sm text-gray-400 mr-1'>by</span>Parth Akothkar</span>
+                <span className='text-xs bg-[#059794] rounded-lg w-20  h-4 text-center text-white tracking-tighter'>92% ACCURACY</span>
+                </div>
+               
+            </div>
+                <div>
+                    <p className=' font-semibold'>Improve your Marks</p>
+                    <p className='text-xs text-gray-400 tracking-tighter'>Improve your marks by practicing more.</p>
+                </div>
+            <button className="mt-4 w-full bg-[#5a5fbc] text-white py-2 rounded-md">Practice more</button>
           </div>
           <div className="mt-4">
             <button className="w-full bg-blue-500 text-white py-2 rounded-md">Visit</button>
