@@ -98,9 +98,9 @@ const Dashboard = () => {
               <span className="bg-[#059794] rounded-xl text-xs tracking-tighter px-1 h-4 inline-block mr-20 sm:mr-1">Economics</span>
               <span className="bg-[#059794] rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Mathematics</span>
               <span className="bg-red-500  rounded-xl text-xs tracking-tighter px-1 h-4 inline-block mr-1">General Studies</span>
-              <span className="bg-gray-400 rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Social Studies</span>
-              <span className="bg-red-500   rounded-xl text-xs tracking-tighter px-1 h-4 inline-block mr-1">English Literature</span>
-              <span className="bg-yellow-500  rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Indial History</span>
+              <span className="bg-gray-400 rounded-xl text-xs tracking-tighter px-1 h-4 mr-1 inline-block">Social Studies</span>
+              <span className="bg-red-500   rounded-xl text-xs tracking-tighter px-1 h-4  mr-1">English Literature</span>
+              <span className="bg-yellow-500  rounded-xl text-xs tracking-tighter px-1 h-4 mr-1 inline-block">Indial History</span>
               <span className="bg-[#059794]   rounded-xl text-xs tracking-tighter px-1 h-4">Current affairs</span>
 
             </div>
@@ -141,8 +141,8 @@ const Dashboard = () => {
             className=" border-2 border-indigo-300 rounded-md px-1 py-1"
           >
             <span className="text-indigo-600 font-bold bg-[#e2e0f4] rounded px-1">{item.percentage}<span className='text-sm'>%</span></span>
-            <span className="text-gray-700 text-sm inline-block tracking-tighter">{item.label}</span>
-            <span className='text-sm text-[#878acc] inline-block tracking-tighter'>{item.highlight}</span>
+            <span className="text-gray-700 text-sm inline-block tracking-tighter">&nbsp;{item.label}</span>
+            <span className='text-sm text-[#878acc] inline-block tracking-tighter'>&nbsp;{item.highlight}</span>
           </div>
         ))}
       </div>
@@ -151,7 +151,7 @@ const Dashboard = () => {
               <div className=' w-full h-full'>
                 <Suggestions/>
               </div>
-              <div className='border-2 rounded-lg border-red-500 w-full h-full sm:row-span-10 sm:col-span-2'>
+              <div className='  w-full h-full sm:row-span-2 sm:col-span-2'>
                 <RulerComponent/>
               </div>
             </div>
