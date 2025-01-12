@@ -5,6 +5,19 @@ import { BiSolidLogIn } from "react-icons/bi";
 import { PiWarningCircleBold } from "react-icons/pi";
 import { FaAngleDown } from "react-icons/fa6";
 import { MdOutlineAutoGraph } from "react-icons/md";
+import { TbClockExclamation } from "react-icons/tb";
+import { FaArrowUp } from "react-icons/fa";
+import CompareAccuracy from './components/CompareAccuracy';
+import Suggestions from './components/Suggestions';
+import RulerComponent from './components/RulerComponent';
+
+
+const data = [
+  { percentage: "25", label: "Based on", highlight: "Facts" },
+  { percentage: "32", label: "Based on", highlight:  "Analysis" },
+  { percentage: "19", label: "Based on", highlight: "Elimination" },
+  { percentage: "24", label: "Based on",highlight: "Guess" },
+];
 
 const Dashboard = () => {
   return (
@@ -57,7 +70,7 @@ const Dashboard = () => {
           <div className="mt-4 bg-white p-2 rounded-md mb-4 border">
           <p className='font-bold'>Revisit Paper</p>
           <p className='text-sm text-gray-500 mb-6'>Challange your friends by simply sharing a link to this test.</p>
-            <button className="mb-6 bg-[#5a5fbc] text-white py-1 rounded-md ml-8 px-10"><BiSolidLogIn className='inline -mt-1 mr-1' />Visit</button>
+            <button className="mb-6 bg-[#5a5fbc] text-white py-1 rounded-md sm:ml-8 ml-20 px-10"><BiSolidLogIn className='inline -mt-1 mr-1' />Visit</button>
             <p className='text-xs text-gray-400 tracking-tighter'><PiWarningCircleBold  className='inline'/>Instructions for how to upload your handwritten material in given</p>
           </div>
         </div>
@@ -65,13 +78,13 @@ const Dashboard = () => {
         {/* Middle and Right Section */}
         <div className="md:col-span-2 lg:col-span-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* Compare Accuracy (3 cards) */}
-          <div className='grid md:col-span-2 lg:col-span-3  grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"> <FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
+          <div className='grid md:col-span-2 lg:col-span-3  grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full'>
+          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold "> <FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
           <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
           <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
           </div>
 
-           <div className='  col-span-3 row-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6 pr-8 sm:pr-0'>
+           <div className='col-span-3 row-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6  sm:pr-0'>
 
             <div className=' grid grid-cols-1 sm:grid-cols-2 gap-6 '>
 
@@ -82,27 +95,68 @@ const Dashboard = () => {
             <div className=" text-white">
               <span className="bg-[#059794]   rounded-xl text-xs tracking-tighter px-1 h-4 inline mr-1">Geography</span>
               <span className="bg-yellow-500  rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Politics</span>
-              <span className="bg-[#059794] rounded-xl text-xs tracking-tighter px-1 h-4 inline-block">Economics</span>
+              <span className="bg-[#059794] rounded-xl text-xs tracking-tighter px-1 h-4 inline-block mr-20 sm:mr-1">Economics</span>
               <span className="bg-[#059794] rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Mathematics</span>
-              <span className="bg-red-500  rounded-xl text-xs tracking-tighter px-1 h-4 inline-block">General Studies</span>
+              <span className="bg-red-500  rounded-xl text-xs tracking-tighter px-1 h-4 inline-block mr-1">General Studies</span>
               <span className="bg-gray-400 rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Social Studies</span>
-              <span className="bg-red-500   rounded-xl text-xs tracking-tighter px-1 h-4 inline-block">English Literature</span>
+              <span className="bg-red-500   rounded-xl text-xs tracking-tighter px-1 h-4 inline-block mr-1">English Literature</span>
               <span className="bg-yellow-500  rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Indial History</span>
               <span className="bg-[#059794]   rounded-xl text-xs tracking-tighter px-1 h-4">Current affairs</span>
 
             </div>
               </div>
 
-              <div className='border-2 rounded-lg border-red-500 w-full h-full'></div>
-              <div className='border-2 rounded-lg border-red-500 w-full h-full sm:row-span-4 sm:col-span-2'></div>
+              
+             
+               {/* Response Time */}
+          <div className="bg-white  rounded-lg shadow-md border-red-500 w-full h-full p-1 pb-4">
+            <h3 className="text-sm text-gray-400 font-semibold mb-2">  <TbClockExclamation className='inline mr-1'/>Response Time</h3>
+            <span className='text-xs font-semibold bg-[#5a5fbc] text-white px-1'>Std Time - 2min</span>
+            <div className='w-full border-2 border-dashed rounded-lg bg-[#f7f6fc] px-1'>
+              <span className='flex  text-gray-400'><sapn className="text-[#059794] text-2xl font-semibold">60</sapn><span className='mt-2 text-gray-400 mr-1'>%</span><span className='text-sm mt-2'>Ans took</span><FaArrowUp  className='text-red-500 mt-2 text-2xl ml-2'/><span className='text-[#5a5fbc] mt-3 font-semibold'>2min</span></span>
             </div>
-            <div className='border-2  grid grid-cols-1 sm:grid-cols-2 gap-6'>
-            <div className='border-2 rounded-lg border-red-500 w-full h-full'></div>
-              <div className='border-2 rounded-lg border-red-500 w-full h-full'></div>
-              <div className='border-2 rounded-lg border-red-500 w-full h-full sm:row-span-2 sm:col-span-2'></div>
+            <p className="text-xl font-semibold">You are <span className="text-red-500">slow</span>&nbsp;!</p>
+          </div>
+             
+              <div className=' w-full h-full sm:row-span-2 sm:col-span-2'>
+                <CompareAccuracy/>
+              </div>
+            </div>
+            <div className=' grid grid-cols-1 sm:grid-cols-2 gap-6'>
+  {/* Approach Data */}
+            
+     <div className="bg-white p-1 rounded-lg shadow-md w-full">
+      {/* Header */}
+      
+       
+         
+        <span className='text-sm font-semibold text-gray-400'> <MdOutlineAutoGraph  className='inline'/>Approach Data</span>
+     
+
+      {/* Data Boxes */}
+      <div className="space-y-1">
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className=" border-2 border-indigo-300 rounded-md px-1 py-1"
+          >
+            <span className="text-indigo-600 font-bold bg-[#e2e0f4] rounded px-1">{item.percentage}<span className='text-sm'>%</span></span>
+            <span className="text-gray-700 text-sm inline-block tracking-tighter">{item.label}</span>
+            <span className='text-sm text-[#878acc] inline-block tracking-tighter'>{item.highlight}</span>
+          </div>
+        ))}
+      </div>
+            </div>
+{/* Suggestion */}
+              <div className=' w-full h-full'>
+                <Suggestions/>
+              </div>
+              <div className='border-2 rounded-lg border-red-500 w-full h-full sm:row-span-10 sm:col-span-2'>
+                <RulerComponent/>
+              </div>
             </div>
            </div>
-          {/* Improvements */}
+         
          
 
           {/* Response Time */}
