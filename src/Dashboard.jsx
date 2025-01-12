@@ -1,10 +1,12 @@
 import png from '../src/assets/png.png'
 import { RiCalendarCheckLine } from "react-icons/ri";
 import profile from '../src/assets/download.jpg'
+import { BiSolidLogIn } from "react-icons/bi";
+import { PiWarningCircleBold } from "react-icons/pi";
 
 const Dashboard = () => {
   return (
-    <div className="p-4 sm:p-8 bg-gray-100 min-h-screen">
+    <div className="p-4 sm:p-8 bg-gray-50 min-h-screen">
      
       {/* Main Content Grid */}
       <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-4">
@@ -50,8 +52,11 @@ const Dashboard = () => {
                 </div>
             <button className="mt-4 w-full bg-[#5a5fbc] text-white py-2 rounded-md">Practice more</button>
           </div>
-          <div className="mt-4">
-            <button className="w-full bg-blue-500 text-white py-2 rounded-md">Visit</button>
+          <div className="mt-4 bg-white p-2 rounded-md mb-4 border">
+          <p className='font-bold'>Revisit Paper</p>
+          <p className='text-sm text-gray-500 mb-6'>Challange your friends by simply sharing a link to this test.</p>
+            <button className="mb-6 bg-[#5a5fbc] text-white py-1 rounded-md ml-8 px-10"><BiSolidLogIn className='inline -mt-1 mr-1' />Visit</button>
+            <p className='text-xs text-gray-400 tracking-tighter'><PiWarningCircleBold  className='inline'/>Instructions for how to upload your handwritten material in given</p>
           </div>
         </div>
 
