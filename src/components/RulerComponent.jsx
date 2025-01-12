@@ -1,66 +1,60 @@
-import React from "react";
+import { GiSandsOfTime } from "react-icons/gi";
 
 const RulerComponent = () => {
   return (
-    <div className="max-w-md mx-auto p-4 border rounded-lg shadow-md bg-white">
-      <h3 className="text-gray-700 text-lg font-semibold flex items-center mb-4">
-        <span className="material-icons mr-2">computer</span> Time Taken
-      </h3>
+    <div className="max-w-md mx-auto p-2  rounded-lg shadow-md bg-white relative">
       
-      {/* Ruler Section */}
-      <div className="space-y-6">
-        {/* First Ruler */}
-        <div>
-          <div className="relative">
-            {/* Ruler background */}
-            <div className="h-6 bg-gray-100 relative flex items-center border border-gray-300">
-              {/* Red Bar */}
-              <div className="absolute left-8 w-[60%] bg-red-500 h-4 rounded"></div>
-              {/* Green Bar */}
-              <div className="absolute left-0 w-[30%] bg-green-500 h-4 rounded"></div>
+        <span className="text-gray-400 mb-4 font-semibold"><GiSandsOfTime className="inline mr-1"/> Time Taken</span>
+      {/* first ruler */}
+      <div className="w-full px-4 mt-4">
+         <div className="relative w-full h-20 bg-[#f1f0fa] rounded ">
+<div>
+            <span className="absolute text-xs">
+                <hr className="h-4 border-r-2 border-[#8f92d2] w-1 border-t-0 rounded"/> 10sec
+            </span>
+            <div className=" absolute w-10 h-4  left-1 flex  gap-1 ">
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
             </div>
-            {/* Slider */}
-            <div className="absolute top-0 left-[30%] transform -translate-x-1/2 w-1 h-8 bg-blue-500"></div>
-          </div>
-          {/* Ruler Scale */}
-          <div className="flex justify-between text-xs text-gray-600 mt-2">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <span key={i}>{i * 10}sec</span>
-            ))}
-          </div>
+            <span className="absolute text-xs left-8">
+                <hr className="h-4 border-r-2 border-[#8f92d2] w-1 border-t-0 rounded ml-1"/> 20
+            </span>
+            <div className=" absolute w-10 h-4 left-10 flex   gap-1">
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+            </div>
+            <span className="absolute text-xs left-16 ">
+                <hr className="h-4 border-r-2 border-[#8f92d2] w-1 border-t-0 rounded ml-2"/> 30
+            </span>
+            <div className=" absolute w-10 h-4  left-20 flex   gap-1 ">
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+                <hr className="h-2 w-1 border-r-2 border-t-0 border-[#8f92d2]"/>
+            </div>
+            </div>
+         </div>
+         </div>
           {/* Description */}
           <p className="text-gray-500 text-sm mt-2">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum
           </p>
-        </div>
+        
 
         {/* Second Ruler */}
-        <div>
-          <div className="relative">
-            {/* Ruler background */}
-            <div className="h-6 bg-gray-100 relative flex items-center border border-gray-300">
-              {/* Red Bar */}
-              <div className="absolute left-[50%] w-[40%] bg-red-500 h-4 rounded"></div>
-              {/* Green Bar */}
-              <div className="absolute left-[10%] w-[20%] bg-green-500 h-4 rounded"></div>
-            </div>
-            {/* Slider */}
-            <div className="absolute top-0 left-[10%] transform -translate-x-1/2 w-1 h-8 bg-blue-500"></div>
-          </div>
-          {/* Ruler Scale */}
-          <div className="flex justify-between text-xs text-gray-600 mt-2">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i}>{i}sec</span>
-            ))}
-          </div>
+        
           {/* Description */}
           <p className="text-gray-500 text-sm mt-2">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum
           </p>
-        </div>
-      </div>
+       
+     
     </div>
   );
 };
