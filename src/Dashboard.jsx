@@ -24,7 +24,7 @@ const Dashboard = () => {
     <div className="p-4 sm:p-8 bg-gray-50 min-h-screen">
      
       {/* Main Content Grid */}
-      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
         {/* Left Section */}
         <div className="md:col-span-1 bg-[#f7f6fc] p-4 rounded-lg shadow-md ">
         <div className='flex flex-col items-center '>
@@ -76,17 +76,17 @@ const Dashboard = () => {
         </div>
 
         {/* Middle and Right Section */}
-        <div className="md:col-span-2 lg:col-span-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="md:col-span-2 lg:col-span-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full">
           {/* Compare Accuracy (3 cards) */}
-          <div className='grid md:col-span-2 lg:col-span-3  grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full'>
-          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold "> <FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
-          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
-          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
+          <div className='grid md:col-span-2 lg:col-span-3  grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full'>
+          <div className="bg-white min-h-56 sm:min-h-20 p-4 rounded-lg shadow-md text-gray-400 font-semibold "> <FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
+          <div className="bg-white min-h-56 sm:min-h-20 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
+          <div className="bg-white min-h-56 sm:min-h-48 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
           </div>
 
-           <div className='col-span-3 row-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6  sm:pr-0'>
+           <div className='col-span-3 row-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 pr-0'>
 
-            <div className=' grid grid-cols-1 sm:grid-cols-2 gap-6 '>
+            <div className=' grid grid-cols-1 sm:grid-cols-2 gap-4 '>
 
             
             <div className="bg-white  rounded-lg shadow-md border-red-500 w-full h-full pl-1 pb-4">
@@ -122,7 +122,7 @@ const Dashboard = () => {
                 <CompareAccuracy/>
               </div>
             </div>
-            <div className=' grid grid-cols-1 sm:grid-cols-2 gap-6'>
+            <div className=' grid grid-cols-1 sm:grid-cols-2 gap-4'>
   {/* Approach Data */}
             
      <div className="bg-white p-1 rounded-lg shadow-md w-full">
