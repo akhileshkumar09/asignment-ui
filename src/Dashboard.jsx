@@ -3,6 +3,8 @@ import { RiCalendarCheckLine } from "react-icons/ri";
 import profile from '../src/assets/download.jpg'
 import { BiSolidLogIn } from "react-icons/bi";
 import { PiWarningCircleBold } from "react-icons/pi";
+import { FaAngleDown } from "react-icons/fa6";
+import { MdOutlineAutoGraph } from "react-icons/md";
 
 const Dashboard = () => {
   return (
@@ -63,47 +65,73 @@ const Dashboard = () => {
         {/* Middle and Right Section */}
         <div className="md:col-span-2 lg:col-span-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* Compare Accuracy (3 cards) */}
-          <div className="bg-white p-4 rounded-lg shadow-md">Compare Accuracy</div>
-          <div className="bg-white p-4 rounded-lg shadow-md">Compare Accuracy</div>
-          <div className="bg-white p-4 rounded-lg shadow-md">Compare Accuracy</div>
-
-          {/* Improvements */}
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <h3 className="text-lg font-bold mb-2">Improvements</h3>
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-yellow-200 px-2 py-1 rounded">Geography</span>
-              <span className="bg-red-200 px-2 py-1 rounded">Politics</span>
-              <span className="bg-green-200 px-2 py-1 rounded">Mathematics</span>
-            </div>
+          <div className='grid md:col-span-2 lg:col-span-3  grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"> <FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
+          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
+          <div className="bg-white min-h-56 sm:min-h-16 p-4 rounded-lg shadow-md text-gray-400 font-semibold"><FaAngleDown className=' inline text-sm  border-2 rounded mr-1 mb-1'/>Compare Accuracy</div>
           </div>
+
+           <div className='  col-span-3 row-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6 pr-8 sm:pr-0'>
+
+            <div className=' grid grid-cols-1 sm:grid-cols-2 gap-6 '>
+
+            
+            <div className="bg-white  rounded-lg shadow-md border-red-500 w-full h-full pl-1 pb-4">
+            <h3 className="text-sm text-gray-400 font-semibold mb-2 "><MdOutlineAutoGraph  className='inline'/> Improvements</h3>
+            <p className='text-sm tracking-tighter font-semibold mb-2'>Subject understanding</p>
+            <div className=" text-white">
+              <span className="bg-[#059794]   rounded-xl text-xs tracking-tighter px-1 h-4 inline mr-1">Geography</span>
+              <span className="bg-yellow-500  rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Politics</span>
+              <span className="bg-[#059794] rounded-xl text-xs tracking-tighter px-1 h-4 inline-block">Economics</span>
+              <span className="bg-[#059794] rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Mathematics</span>
+              <span className="bg-red-500  rounded-xl text-xs tracking-tighter px-1 h-4 inline-block">General Studies</span>
+              <span className="bg-gray-400 rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Social Studies</span>
+              <span className="bg-red-500   rounded-xl text-xs tracking-tighter px-1 h-4 inline-block">English Literature</span>
+              <span className="bg-yellow-500  rounded-xl text-xs tracking-tighter px-1 h-4 mr-1">Indial History</span>
+              <span className="bg-[#059794]   rounded-xl text-xs tracking-tighter px-1 h-4">Current affairs</span>
+
+            </div>
+              </div>
+
+              <div className='border-2 rounded-lg border-red-500 w-full h-full'></div>
+              <div className='border-2 rounded-lg border-red-500 w-full h-full sm:row-span-4 sm:col-span-2'></div>
+            </div>
+            <div className='border-2  grid grid-cols-1 sm:grid-cols-2 gap-6'>
+            <div className='border-2 rounded-lg border-red-500 w-full h-full'></div>
+              <div className='border-2 rounded-lg border-red-500 w-full h-full'></div>
+              <div className='border-2 rounded-lg border-red-500 w-full h-full sm:row-span-2 sm:col-span-2'></div>
+            </div>
+           </div>
+          {/* Improvements */}
+         
 
           {/* Response Time */}
-          <div className="bg-white p-4 rounded-lg shadow-md">
+          {/* <div className="bg-white p-4 rounded-lg shadow-md">
             <h3 className="text-lg font-bold mb-2">Response Time</h3>
             <p className="text-red-500">You are slow!</p>
-          </div>
+          </div> */}
 
           {/* Approach Data */}
-          <div className="bg-white p-4 rounded-lg shadow-md">
+          {/* <div className="bg-white p-4 rounded-lg shadow-md">
             <h3 className="text-lg font-bold mb-2">Approach Data</h3>
             <p>Analysis: 32%</p>
-          </div>
+          </div> */}
 
           {/* Suggestions */}
-          <div className="bg-white p-4 rounded-lg shadow-md">
+          {/* <div className="bg-white p-4 rounded-lg shadow-md">
             <h3 className="text-lg font-bold mb-2">Suggestions</h3>
             <p>40 sec for Easy questions</p>
-          </div>
+          </div> */}
 
           {/* Compare Accuracy Graph */}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-1 bg-white p-4 rounded-lg shadow-md">
+          {/* <div className="col-span-1 sm:col-span-2 lg:col-span-1 bg-white p-4 rounded-lg shadow-md">
             <h3 className="text-lg font-bold mb-2">Compare Accuracy Graph</h3>
-          </div>
+          </div> */}
 
           {/* Time Taken */}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-1 bg-white p-4 rounded-lg shadow-md">
+          {/* <div className="col-span-1 sm:col-span-2 lg:col-span-1 bg-white p-4 rounded-lg shadow-md">
             <h3 className="text-lg font-bold mb-2">Time Taken</h3>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
